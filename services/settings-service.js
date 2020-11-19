@@ -29,11 +29,10 @@ function getDefaultDir() {
 
 function isValidDir(dirPath) {
   try {
-    fs.readFileSync(dirPath)
+    fs.readdirSync(dirPath)
     return true
   } catch {
     return false
-    
   }
 }
 
